@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       image: mstorsjo/llvm-mingw:latest
     steps:
@@ -41,4 +41,4 @@ jobs:
           ls
       - uses: actions/upload-artifact@v3
         with:
-          path: ffmpeg/ffbuild/config.log
+          path: ffmpeg/ffbuild/ffmpeg.exe
